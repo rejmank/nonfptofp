@@ -21,6 +21,7 @@ const tryToMakeReservation = (time) => {
 // we can read inside of request handler (or in any function pushed to side of our program)
 route.get((req)=> {
     // request handler is our inpure function pushed to side of program
+    // we can call pure functions without making them inpure 
     try {
     const result = readFromDb(req.time)
     res.send(makeReservation(result))
